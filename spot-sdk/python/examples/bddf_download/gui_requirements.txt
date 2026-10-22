@@ -1,0 +1,6 @@
+-f ../../../prebuilt
+bosdyn-client >= 3.1
+
+qtpy
+PyQt6
+requests
