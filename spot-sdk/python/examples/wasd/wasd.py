@@ -555,7 +555,7 @@ class WasdInterface(object):
         faults_out: list[str] = []
         if self.robot_state is not None:
             for fault in self.robot_state.system_fault_state.faults:
-                faults_out.append(f"{fault.name}, {fault.attributes}, {fault.code}")
+                faults_out.append(f"{fault.name}, {fault.attributes}, {fault.error_message}")
             return ' , '.join(faults_out)[:139] if faults_out else "NO ERRORS!"
         else:
             return "waiting..."
